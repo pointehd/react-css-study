@@ -1,7 +1,27 @@
-$blue : #228be6; // 주석?? 선언
+$blue: #228be6;
+$gray: #495057;
+$pink: #f06595;
 /*
     변수를 주석이라고 부르는가?
 */
+@mixin button-color($color) {
+    background: $color;
+    &:hover {
+        background : lighten($color, 10%);
+    }
+    &:active {
+        background : darken($color, 10%);
+    }
+    &.outLine {
+        color: $color;
+        background: none;
+        border : 1px solid $color;
+        &:hover {
+            background: $color;
+            color:white;
+        }
+    }
+}
 
 .Button {
     display:inline-flex;
@@ -11,19 +31,59 @@ $blue : #228be6; // 주석?? 선언
     border-radius: 4px;
     border :none;
     cursor: pointer;
-
+/*
+왜나는 line-height: 없이 안되징.;
+*/
     height: 2.25rem;
     line-height: 2.25rem;
     padding-left : 1rem;
     padding-right:1rem;
     font-size: 1rem;
-    
-    background: $blue; // 주석 사용
+    &.large{
+        height : 3rem;
+        font-size:1.25rem;
+        line-height: 3rem;
+    }
+    &.medium {
+        height: 2.25rem;
+        font-size:1rem;
+        line-height: 2.25rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    &.small {
+        height: 1.75rem;
+        font-size: 0.875rem;
+        line-height: 1.75rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 
-    &:hover {
-        background: lighten($blue, 10%);
+    &.blue {
+        @include button-color($blue);
     }
-    &:active {
-        background: darken($blue, 10%);
+
+    &.gray {
+        @include button-color($gray);
     }
+
+    &.pink {
+        @include button-color($pink);
+    }
+
+    & + & {
+        margin-left: 1rem;
+    }
+    &.fullWidth {
+        width: 100%;
+        justify-content: center;
+        & + &{
+            margin-left : 0;
+            margin-top: 1rem;
+        }
+    }
+    /*
+    .Button + .Button 
+    이런건 처음보네용
+    */
 }   

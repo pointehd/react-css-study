@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.scss';
 import Button from './components/Button';
 
@@ -6,7 +5,45 @@ function App() {
   return (
     <div className="App">
       <div className="buttons">
-        <Button>Button</Button>
+        <Button size="large">BUTTON</Button>
+        <Button>BUTTON</Button>
+        <Button size="small">BUTTON</Button>
+      </div>
+      <div className="buttons">
+        <Button size="large" color="gray">
+          BUTTON
+        </Button>
+        <Button color="gray">BUTTON</Button>
+        <Button size="small" color="gray">
+          BUTTON
+        </Button>
+      </div>
+      <div className="buttons">
+        <Button size="large" color="pink">
+          BUTTON
+        </Button>
+        <Button color="pink">BUTTON</Button>
+        <Button size="small" color="pink">
+          BUTTON
+        </Button>
+      </div>
+      <div className="buttons">
+        <Button size="large" outLine>
+          BUTTON
+        </Button>
+        <Button color="pink" outLine>BUTTON</Button>
+        <Button size="small" color="gray" outLine> 
+          BUTTON
+        </Button>
+      </div>
+      <div className="buttons">
+        <Button size="large" outLine fullWidth>
+          BUTTON
+        </Button>
+        <Button size="large" color="pink" fullWidth>BUTTON</Button>
+        <Button size="large" fullWidth color="gray"> 
+          BUTTON
+        </Button>
       </div>
     </div>
   );

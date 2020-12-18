@@ -1,11 +1,18 @@
 import React from 'react';
 import './Buttons.scss';
+import className from 'classnames';
 
-function Button({children, size}){
+function Button({children, size, color, outLine, fullWidth}){
     return (
-        <button className={['Button',size].join(' ')}>{children}</button>
+        <button className={className('Button', size, color, {outLine, fullWidth})}>{children}</button>
     );
 }
+
+/**
+ * className 사용하지않고 
+ * 
+ * <button className={['Button',size].join(' ')}>{children}</button>
+ */
 /**
  * 클래스이름 동적으로 넣기 
  * className={['Button', size].join(' ')}
@@ -16,7 +23,8 @@ function Button({children, size}){
  * 
  */
 Button.defaultProps = {
-    size : 'medium'
+    size : 'medium',
+    color: 'blue'
 }
 
 

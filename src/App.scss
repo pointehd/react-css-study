@@ -5,3 +5,9 @@
   border : 1px solid black;
   padding: 1rem;
 }
+
+.Button {
+  & + & {
+    margin-top: 1rem;
+  }
+}
