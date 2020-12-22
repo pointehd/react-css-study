@@ -1,4 +1,7 @@
 # 기록
+* 20.12.22 : css Module
+> 쉬운듯 어려운듯~ 
+
 * 20.12.21 : css Module 완료
 > styled-components 공부중! 
 

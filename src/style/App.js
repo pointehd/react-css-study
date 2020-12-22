@@ -1,15 +1,21 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 const Circle = styled.div`
-    width : 5rem;
+    width: 5rem;
     height: 5rem;
     background: ${props => props.color || 'black'};
-    border-radius : 50%;
+    border-radius: 50%;
+    ${props =>
+    props.huge &&
+    css`
+        width: 10rem;
+        height: 10rem;
+    `}
 `;
 
 function App( {color}) {
-    return <Circle color={color} />
+    return <Circle color={color} huge />
 }
 
 export default App;

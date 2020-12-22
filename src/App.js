@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <div>
-        <App2 color="blue"/>
+        <App2 color="red"/>
       </div>
       <div className="App">
         
