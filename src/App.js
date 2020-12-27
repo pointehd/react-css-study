@@ -16,7 +16,6 @@ function App() {
         <App2 color="red"/>
       </div>
       <div className="App">
-        
         <div>
           <CheckBox onChange={onChange} checked={check}>
             다음 약관에 모두 동의
